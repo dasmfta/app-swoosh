@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swooch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swooch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="-352" y="112"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="ZBP-Py-aUF">
             <objects>
-                <viewController id="nKM-ZM-lTQ" sceneMemberID="viewController">
+                <viewController id="nKM-ZM-lTQ" customClass="LeagueVC" customModule="app_swooch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndf-HM-NO5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GNq-t7-N5Z" kind="show" id="w06-Yn-Cga"/>
+                                    <action selector="onNextPressed:" destination="nKM-ZM-lTQ" eventType="touchUpInside" id="ZB5-9d-SKW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drZ-hd-F9l">
@@ -223,23 +223,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hWm-jR-qgo"/>
                     </view>
+                    <connections>
+                        <segue destination="GNq-t7-N5Z" kind="show" identifier="skillVCSegue" id="Ado-zN-xN2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bl1-wr-GPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="WZh-hD-SSp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="111.68478260869566"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="tRG-pQ-lh4">
             <objects>
-                <viewController id="GNq-t7-N5Z" sceneMemberID="viewController">
+                <viewController id="GNq-t7-N5Z" customClass="SkillVC" customModule="app_swooch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLi-At-NvQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-xr-8Ja">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="174-8E-D2Z">
                                 <rect key="frame" x="0.0" y="40" width="414" height="70"/>
                                 <subviews>
@@ -296,6 +296,9 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-xr-8Ja">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
